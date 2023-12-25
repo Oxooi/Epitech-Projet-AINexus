@@ -1,0 +1,128 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Forum
+{% endblock %}
+
+{% block stylesheets %}
+  <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block javascripts %}
+  <script src="{{ asset('assets/js/typeitForum.js') }}" defer></script>
+{% endblock %}
+
+{% block body %}
+  <section id="hero-section">
+    <div class="container">
+      <div class="row">
+        <div class="d-xl-flex justify-content-xl-center align-items-xl-center">
+          <div class="col-md-6">
+            <div class="input-group mb-3">
+              <input type="text"
+                name="searchDiscussion"
+                class="form-control"
+                id="discussionBar" />
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">
+                  Button
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 mt-5">
+          <div class="d-flex justify-content-center mb-3">
+            <div class="flex-grow-1">
+              <h2 class="h3 font-weight-bold">
+                Forums
+              </h2>
+              <nav class="nav cat-list">
+              {% for categorie in categories %}
+                <li class="nav-item px-2 py-2">
+                  <a class="nav-link px-2 py-2 text-dark categorie-link" href="#">
+                    {{categorie.name}}
+                  </a>
+                </li>
+              {% endfor %}
+              </nav>
+            </div>
+          </div>
+          <div class="d-lg-flex mb-lg-4">
+            <div class="w-lg-2/3">
+              <ul class="list-group">
+                {% for discussion in discussions %}
+                  <li class="list-group-item discussion-item">
+                    <div class="d-flex align-items-start"
+                      style="padding: 1.75rem;">
+                      <img src="{{ asset('assets/avatars/64424c3c42708.png') }}"
+                        alt=""
+                        class="rounded-circle"
+                        style="width:50px;height: 50px;" />
+                      <div class="flex-grow-1 ms-4">
+                        <a href="#" class="h4 font-weight-bold" style="text-decoration: none;">
+                          {% if (discussion.title|length) > 30 %}
+                            {{ (discussion.title|slice(0, 30)) ~ '...' }}
+                          {% else %}
+                            {{ discussion.title }}
+                          {% endif %}
+                        </a>
+                        <p class="text-muted small mb-2 ">
+                          <span>{{ discussion.category.name }}</span>
+                        </p>
+                        {# If the content is greater than 200 chars cut and place ... #}
+                        <p class="content-paragraph">
+                          {% if (discussion.content|length) > 200 %}
+                            {{ (discussion.content|slice(0, 200)) ~ '...' }}
+                          {% else %}
+                            {{ discussion.content }}
+                          {% endif %}
+                        </p>
+                        <p class="text-muted small mb-2">
+                          Posted By: <a href="#">{{ discussion.user.username }}</a>
+                          at {{ discussion.getCreatedAt()|date('d-m-Y H:i') }}
+                        </p>
+                        <div class="action-btn">
+                          <ul>
+                            <li>0 Views</li>
+                            <li>0 Comments</li>
+                            <li>Share</li>
+                            <li>...</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-5" id="top-hashtags">
+          <div class="mb-4">
+            <h2>
+              Top Tags used
+            </h2>
+          </div>
+          {% for catTag in categoriesTags %}
+          <div style="border-left-width: 4px;border-left-style: solid;padding-left: 10px;"
+            class="hashtag-link">
+            <h5>
+              #{{ catTag.name }}
+            </h5>
+            <p>
+              {% if catTag.nbViews <= 1000 %}
+                {{ catTag.nbViews }} use
+              {% elseif catTag.nbViews > 1000 and catTag.nbViews <= 1000000 %}
+                {{ catTag.nbViews / 1000 }}k use
+              {% else %}
+                {{ catTag.nbViews / 1000000 }}M use
+              {% endif %}
+            </p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

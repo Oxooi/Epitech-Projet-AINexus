@@ -1,0 +1,281 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Personnas{% endblock %}
+
+{% block body %}
+<header class="bg-dark">
+        <div class="container pt-4 pt-xl-5">
+            <div class="row pt-5">
+                <div class="col-md-8 col-xl-6 text-center text-md-start mx-auto">
+                    <div class="text-center">
+                        <p class="lead fw-bold text-success mb-2" style="border-radius: 16px;border-width: 2.4px;border-style: solid;">Solution #1 against solitude</p>
+                        <h1 class="fw-bold">Your best friend anywhere and anytime with you! 🤗</h1>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-10 mx-auto">
+                    <div class="position-relative" style="display: flex;flex-wrap: wrap;justify-content: flex-end;">
+                        <div style="position: relative;flex: 0 0 45%;transform: translate3d(-15%, 35%, 0);"><img class="rounded img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.8" src={{ asset("assets/img/products/Fizz.png") }} width="500" height="300"></div>
+                        <div style="position: relative;flex: 0 0 45%;transform: translate3d(-5%, 20%, 0);"><img class="rounded img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.4" src={{ asset("assets/img/products/log23.png") }}></div>
+                        <div style="position: relative;flex: 0 0 60%;transform: translate3d(0, 0%, 0);"><img class="rounded img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.25" src={{ asset("assets/img/products/log2.png") }}></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="py-5">
+        <div class="container text-center py-5">
+            <p class="mb-4" style="font-size: 1.6rem;">Powered by :</p><a href="#"> <img class="m-3" src={{ asset("assets/img/brands/OpenAI_Logo.svg.png") }}></a><a href="#"> <img class="m-3" src={{ asset("assets/img/brands/Discord_logo.svg.png") }}></a>
+        </div>
+    </section>
+    <section id="services">
+        <div class="container bg-dark py-5" style="background: rgb(39, 38, 46);">
+            <div class="row">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <p class="fw-bold text-success mb-2">Our Services</p>
+                    <h3 class="fw-bold">What our Peronnas can do</h3>
+                </div>
+            </div>
+            <div class="py-5 p-lg-5">
+                <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
+                    <div class="col mb-5">
+                        <div class="card shadow-sm">
+                            <div class="card-body px-4 py-5 px-md-5">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-chat text-success">
+                                        <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"></path>
+                                    </svg></div>
+                                <h5 class="fw-bold card-title">Have real discussion</h5>
+                                <p class="text-muted card-text mb-4">They can keep and maintain a real discussion &amp; remember what they said several messages back</p><button class="btn btn-primary shadow" type="button">Learn more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card shadow-sm">
+                            <div class="card-body px-4 py-5 px-md-5">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-code text-success">
+                                        <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"></path>
+                                    </svg></div>
+                                <h5 class="fw-bold card-title">Suggest &amp; write code</h5>
+                                <p class="text-muted card-text mb-4">If you have trouble with your code, or if you need ideas: They may have the solution to your problem. No matter the language</p><button class="btn btn-primary shadow" type="button">Learn more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body px-4 py-5 px-md-5">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person-circle text-success">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"></path>
+                                    </svg></div>
+                                <h5 class="fw-bold card-title">Stay connect 24/7</h5>
+                                <p class="text-muted card-text mb-4">Your friend will always be available &amp; connected for you!<br>No matter the day or weather.</p><button class="btn btn-primary shadow" type="button">Learn more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body px-4 py-5 px-md-5">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-journals text-success">
+                                        <path d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2 2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"></path>
+                                        <path d="M1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 2.5v.5H.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H2v-.5a.5.5 0 0 0-1 0z"></path>
+                                    </svg></div>
+                                <h5 class="fw-bold card-title"><strong>Suggest &amp; give recipes</strong></h5>
+                                <p class="text-muted card-text mb-4">If you're hungry and have a few ingredients but don't know what to do:<br>They will be there to give you recipe ideas</p><button class="btn btn-primary shadow" type="button">Learn more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="prices" class="py-5 mt-5">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2 class="fw-bold">Our Prices</h2>
+                    <p class="text-muted w-lg-50">Here you can find our prices and details</p>
+                </div>
+            </div>
+            <div class="row g-0 row-cols-1 row-cols-md-2 row-cols-xl-3 d-flex align-items-md-center align-items-xl-center">
+                <div class="col offset-xl-2 mb-4">
+                    <div class="card bg-light border-light">
+                        <div class="card-body bg-dark p-4">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h3 class="fw-bold mb-0">Basic Plan</h3>
+                                    <p>Limited</p>
+                                    <h4 class="display-4 fw-bold">Free</h4>
+                                </div>
+                            </div>
+                            <div>
+                                <ul class="list-unstyled">
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon bs-icon-xs me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg text-primary">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                            </svg></span><span>Talk with personnas</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon bs-icon-xs me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg text-primary">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                            </svg></span><span>Add in your discord server</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon bs-icon-xs me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg text-primary">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                            </svg></span><span>~ 200 messages limited</span></li>
+                                </ul>
+                            </div><a class="btn btn-primary d-block w-100" href={{path("app_personnas_free-sub")}}>Subscribe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card text-white bg-primary">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h3 class="fw-bold text-white mb-0">Pro Bundle</h3>
+                                    <p>Premium</p>
+                                    <h4 class="display-4 fw-bold text-white">$10</h4>
+                                </div>
+                                <div><span class="badge rounded-pill bg-primary text-uppercase bg-semi-white">Best Value</span></div>
+                            </div>
+                            <div>
+                                <ul class="list-unstyled">
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg text-primary">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                            </svg></span><span>Talk with personna</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg text-primary">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                            </svg></span><span>Add in your discord server</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg text-primary">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                            </svg></span><span>Talk with personna in DM</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg text-primary">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                            </svg></span><span>Create your personalized personna</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg text-primary">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                            </svg></span><span>Illimited messages</span></li>
+                                </ul>
+                            </div><a class="btn btn-primary d-block w-100 bg-semi-white" href={{path("app_personnas_premium-sub")}}>Subscribe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="faq">
+        <div class="container py-5">
+            <div class="mx-auto" style="max-width: 900px;">
+                <div class="row mb-5">
+                    <div class="col-md-8 col-xl-6 text-center mx-auto">
+                        <h2 class="fw-bold">FAQ</h2>
+                    </div>
+                </div>
+                <div class="row gy-5 row-cols-1 row-cols-md-2 d-flex flex-column justify-content-start">
+                    <div class="col" style="width: 100%;padding-left: 26px;padding-top: 7px;border-left-width: 8px;border-left-style: solid;">
+                        <div style="width: 100%;">
+                            <h1 data-aos="fade-right" data-aos-delay="200">Do you keep records of our conversations ?</h1>
+                            <p data-aos="fade-right" data-aos-delay="250" style="color: var(--bs-secondary-bg);">No !&nbsp;&nbsp;We mainly used ChatGPT 3.5 Turbo for chats. we do not keep track of your conversations.</p>
+                        </div>
+                    </div>
+                    <div class="col" style="width: 100%;padding-left: 26px;padding-top: 7px;border-left-width: 8px;border-left-style: solid;">
+                        <div style="width: 100%;">
+                            <h1 data-aos="fade-right" data-aos-delay="200">What is the technology used?</h1>
+                            <p data-aos="fade-right" data-aos-delay="250" style="color: var(--bs-secondary-bg);">We are using :<br>&nbsp; &nbsp;- ChatGPT 3.5 Turbo (Backend)<br>&nbsp; &nbsp;- Node.JS (Backend)<br>&nbsp; &nbsp;- Midjourney (Avatar)</p>
+                        </div>
+                    </div>
+                    <div class="col" style="width: 100%;padding-left: 26px;padding-top: 7px;border-left-width: 8px;border-left-style: solid;">
+                        <div style="width: 100%;">
+                            <h1 data-aos="fade-right" data-aos-delay="200">Can personas be anywhere other than Discord ?</h1>
+                            <p data-aos="fade-right" data-aos-delay="250" style="color: var(--bs-secondary-bg);">No, I mean not yet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="personnas" class="py-5">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <p class="fw-bold text-success mb-2">Testimonials</p>
+                    <h2 class="fw-bold"><strong>Our personnas</strong></h2>
+                    <p class="text-muted w-lg-50">Meet you'r future best friend</p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 d-sm-flex justify-content-sm-center">
+                <div class="col mb-4">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <p class="bg-dark border rounded border-dark p-4">I'm Alice, a persona passionate about reading and hiking. I love discovering new books and exploring nature. Let's discuss our latest reads and the most beautiful hiking trails!</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="70" height="70" src={{asset("assets/img/team/majeurdome_white_flowers_with_black_background_in_the_dark_in_t_c290f67d-42f9-4551-9b95-8c5bf032e21d.png")}}>
+                            <div>
+                                <p class="fw-bold text-primary mb-0">Alicia</p>
+                                <p class="text-muted mb-0">Female</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <p class="bg-dark border rounded border-dark p-4">Hi, I'm Maxime. I'm a persona who loves music and cooking. I can recommend great playlists for all occasions and share delicious recipes. Ready to have a good time together?</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="70" height="70" src={{ asset("assets/img/team/majeurdome_in_American_style_a65da6da-0a7b-4c7f-8ce4-ab8e0dba295e.png") }}>
+                            <div>
+                                <p class="fw-bold text-primary mb-0">Maxime</p>
+                                <p class="text-muted mb-0">Male</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <p class="bg-dark border rounded border-dark p-4">Hello! I'm Lola, a persona passionate about visual arts and yoga. I love creating artistic works and practicing yoga for relaxation. Let's talk about art, creativity, and the benefits of yoga!</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="70" height="70" src={{ asset("assets/img/team/majeurdome_a_pretty_parisian_women_8K_Hyperrealistic_photograph_90bd8710-98da-435f-8200-76e64dd897c6.png") }}>
+                            <div>
+                                <p class="fw-bold text-primary mb-0">Lola</p>
+                                <p class="text-muted mb-0">Female</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <p class="bg-dark border rounded border-dark p-4">Hi, I'm Gabriel. I'm a persona who is a fan of football and photography. Whether you want to discuss the latest matches or share photography tips, I'm here for you. Ready to score a goal or capture a precious moment?</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="70" height="70" src={{ asset("assets/img/team/majeurdome_a_blond_guy_with_half_long_hair_and_sunglasses_e479f704-f582-4d57-a4cd-f3e16f40cb40.png") }}>
+                            <div>
+                                <p class="fw-bold text-primary mb-0">Mathias</p>
+                                <p class="text-muted mb-0">Male</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <p class="bg-dark border rounded border-dark p-4">Hello there! I'm Ethan, a gamer geek who's passionate about video games, technology, and movies. Let's dive into exciting discussions about our favorite games, the latest tech trends, and the most thrilling movies out there!</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="70" height="70" src={{ asset("assets/img/team/majeurdome_None_066fc7a1-5b89-40d0-b50e-1ebd0de18fb7.png") }}>
+                            <div>
+                                <p class="fw-bold text-primary mb-0">Ethan</p>
+                                <p class="text-muted mb-0">Male</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-center">
+        <div class="container text-muted py-4 py-lg-5">
+            <ul class="list-inline">
+                <li class="list-inline-item me-4"><a class="link-primary" href="#">Web design</a></li>
+                <li class="list-inline-item me-4"><a class="link-primary" href="#">Development</a></li>
+                <li class="list-inline-item"><a class="link-primary" href="#">Hosting</a></li>
+            </ul>
+            <ul class="list-inline">
+                <li class="list-inline-item me-4"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+                    </svg></li>
+                <li class="list-inline-item me-4"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter">
+                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+                    </svg></li>
+                <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+                    </svg></li>
+            </ul>
+            <p class="mb-0">Copyright © 2023 AI-Nexus</p>
+        </div>
+    </footer>
+{% endblock %}

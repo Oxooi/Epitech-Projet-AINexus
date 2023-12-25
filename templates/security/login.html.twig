@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+  <link href="{{ asset('assets/css/login.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block title %}
+  Log in
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <input type="checkbox" id="flip" />
+    <div class="cover">
+      <div class="front">
+        <img src="{{ asset('assets/uploads/img/frontImg.png') }}" alt="" />
+      </div>
+    </div>
+
+    {% for flash in app.Flashes('danger') %}
+    <div class="alert alerte-danger">
+      {{ message }}
+    </div>
+    {% endfor %}
+
+    <div class="forms">
+      <div class="form-content">
+        <div class="login-form">
+          <div class="title">
+            Login
+          </div>
+          <form method="post">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="email"
+                  value="{{ last_username }}"
+                  name="email"
+                  id="inputEmail"
+                  placeholder="Enter your email"
+                  autocomplete="email"
+                  required
+                  autofocus />
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password"
+                  name="password"
+                  id="inputPassword"
+                  placeholder="Enter your password"
+                  autocomplete="current-password"
+                  required />
+              </div>
+              <div class="text">
+                <a href="#">Forgot password?</a>
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Login" />
+              </div>
+              <input type="hidden"
+                name="_csrf_token"
+                value="{{ csrf_token('authenticate') }}" />
+              <div class="text sign-up-text">
+                Don't have an account? <a href="{{ path('app_register') }}">Register
+                  now</a>
+              </div>
+            </form>
+              <div class="my-5 d-flex w-100 align-items-center justify-content-between">
+                <div class="flex-grow-1 me-3 border-top border-secondary"></div>
+                <div class="text-uppercase text-gray-400">
+                  Or
+                </div>
+                <div class="flex-grow-1 ms-3 border-top border-secondary"></div>
+              </div>
+              <div>
+                <!-- Bouton connexion Google -->
+                <button type="button"
+                  class="btn btn-light d-flex align-items-center justify-content-center btn-custom mb-3 w-100">
+                  <img width="20px"
+                    class="me-2"
+                    style="margin-bottom:3px; margin-right:5px"
+                    alt="Google sign-in"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                  Login with Google
+                </button>
+
+                <!-- Bouton connexion GitHub -->
+                <button type="button"
+                  class="btn btn-github d-flex align-items-center justify-content-center btn-custom mb-3 w-100">
+                  <i class="bi-github me-2"></i>
+                  Login with GitHub
+                </button>
+
+                <!-- Bouton connexion Apple -->
+                <button type="button"
+                  class="btn btn-apple d-flex align-items-center justify-content-center btn-custom mb-3 w-100">
+                  <i class="bi-apple me-2"></i>
+                  Login with Apple
+                </button>
+                <!-- Bouton connexion Discord -->
+                <a href="{{path('app_discord_connect')}}" style="text-decoration:none;">
+                  <button type="button"
+                  class="btn btn-discord d-flex align-items-center justify-content-center btn-custom mb-3 w-100">
+                  <i class="bi-discord me-2"></i>
+                  Login with Discord
+                </button>
+                </a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

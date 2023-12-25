@@ -1,0 +1,139 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  {% if app.user %}
+    {{ app.user.username }}'s Profil
+   {% else %}
+    Profil
+  {% endif %}
+{% endblock %}
+
+{% block stylesheets %}
+  <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+  {% if app.user %}
+    <section id="hero-section" style="color: white;">
+      <div class="row py-5 px-4 mx-auto">
+        <div class="col-md-10 mx-auto">
+          <div class="rounded overflow-hidden" style="background: #232735;">
+            <div class="p-4 d-flex justify-content-end text-center"
+              style="background: transparent;">
+              <button class="btn btn-primary" type="button">Edit Profil</button>
+            </div>
+            <div class="px-4 pt-0 pb-4 cover">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12 d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center">
+                    <img class="rounded-circle"
+                      src="{{ app.user.avatar }}"
+                      alt="{{ app.user.username }}"
+                      width="150" />
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="col-md-12">
+                    <h3>
+                      {{ app.user.username }}
+                    </h3>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="col-md-12">
+                    <p>
+                      {{ app.user.email }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shadow rounded overflow-hidden"
+            style="background: #232735;">
+            <div class="mt-5">
+              <h1 style="text-align: center;">
+                Your last posts
+              </h1>
+            </div>
+            <div class="grid-gallery">
+              <div class="grid-item">
+                <a href="#">
+                  <img src="{{ asset('assets/img/Capture.png') }}" />
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="#">
+                  <img src="{{ asset('assets/img/Capture.png') }}" />
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="#">
+                  <img src="{{ asset('assets/img/img-2.jpg') }}" />
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="#">
+                  <img src="{{ asset('assets/img/img-2.jpg') }}" />
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="#"><img src="{{ asset('assets/img/bar.jpg') }}" /></a>
+              </div>
+              <div class="grid-item">
+                <a href="#">
+                  <img src="{{ asset('assets/img/FtBdVUMWcAA5bNd.jpg') }}" />
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="#">
+                  <img src="{{ asset('assets/img/img-5.jpg') }}" />
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="#">
+                  <img src="{{ asset('assets/img/img-6.jpg') }}" />
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="#">
+                  <img src="{{ asset('assets/img/img-7.jpg') }}" />
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="#">
+                  <img src="{{ asset('assets/img/img-8.jpg') }}" />
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="#">
+                  <img src="{{ asset('assets/img/img-9.jpg') }}" />
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="#">
+                  <img src="{{ asset('assets/img/img-9.jpg') }}" />
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="#">
+                  <img src="{{ asset('assets/img/img-10.jpg') }}" />
+                </a>
+              </div>
+              <div class="grid-item">
+                <a href="#">
+                  <img src="{{ asset('assets/img/img-10.jpg') }}" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% else %}
+    {# Redirect to login route #}
+    <script type="text/javascript">
+      window.location.href = "{{ path('app_login') }}";
+    </script>
+  {% endif %}
+{% endblock %}

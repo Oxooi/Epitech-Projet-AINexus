@@ -1,0 +1,25 @@
+{
+  "name": "ainexus",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@symfony/webpack-encore": "^4.3.0",
+    "webpack-notifier": "^1.15.0"
+  },
+  "scripts": {
+    "dev-server": "encore dev-server",
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "build": "encore production --progress"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.30.1"
+  },
+  "description": ""
+}

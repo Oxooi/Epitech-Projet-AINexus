@@ -1,0 +1,29 @@
+<!-- <nodes.js embedding> -->
+<script type="text/javascript" src="{{asset('assets/js/nodes.js')}}"></script>
+<script type="text/javascript">
+    var nodesjs = new NodesJs({
+        id: 'nodes',
+        width: window.innerWidth,
+        height: window.innerHeight,
+        particleSize: 2,
+        lineSize: 1,
+        particleColor: [0, 0, 0, 0.3],
+        lineColor: '0, 0, 0',
+        backgroundFrom: [255, 255, 255],
+        backgroundTo: [255, 255, 255],
+        backgroundDuration: 4000,
+        nobg: false,
+        number: window.hasOwnProperty('orientation') ? 30 : 100,
+        speed: 20
+    });
+</script>
+<!-- <div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: -100;">
+    <canvas id="nodes"></canvas>
+</div> -->
+<!-- </nodes.js embedding> -->
+<script type="text/javascript">
+    window.onresize = function () {
+        nodesjs.setWidth(window.innerWidth);
+        nodesjs.setHeight(window.innerHeight);
+    };
+</script>

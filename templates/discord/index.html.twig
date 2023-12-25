@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<form action="{{path('app_discord_connect')}}" method="post">
+    <input type="hidden" name='tokenDiscord' value="{{ csrf_token('discord-auth') }}">
+</form>
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %} 
+<link href="{{ asset('assets/css/register.css') }}" rel="stylesheet" /> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+{% endblock %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+ <div class="container">
+        <div class="cover">
+            <div class="front">
+                <img src="{{ asset('assets/uploads/img/back.jpg') }}" alt="">
+            </div>
+        </div>
+        <div class="forms">
+            <div class="form-content">
+                <div class="signup-form">
+                    <div class="title">Sign up</div>
+                    <form method="post">
+                    {{ form_start(registrationForm) }}
+                        <div class="input-boxes">
+                            <div class="input-box">
+                                <i class="fas fa-user"></i>
+                                {{ form_label(registrationForm.username, '', { 'label_attr': {'class': 'visually-hidden'} }) }}
+                                {{ form_widget(registrationForm.username, { 'attr': {'placeholder': 'Enter your username', 'required': 'required', 'autocomplete': 'username', 'autofocus': 'autofocus'} }) }}
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-envelope"></i>
+                                {{ form_label(registrationForm.email, '', { 'label_attr': {'class': 'visually-hidden'} }) }}
+                                {{ form_widget(registrationForm.email, { 'attr': {'placeholder': 'Enter your email', 'required': 'required', 'autocomplete': 'email', 'autofocus': 'autofocus'} }) }}
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-lock"></i>
+                                 {{ form_label(registrationForm.plainPassword, '', { 'label_attr': {'class': 'visually-hidden'} }) }}
+                                {{ form_widget(registrationForm.plainPassword, { 'attr': {'placeholder': 'Enter your password', 'required': 'required', 'autocomplete': 'email', 'autofocus': 'autofocus'} }) }}
+                            </div>
+                            {{ form_row(registrationForm.agreeTerms) }}
+                            <div class="button input-box">
+                                <input type="submit" value="Register">
+                            </div>
+                    {{ form_end(registrationForm) }}
+                            <div class="text sign-up-text">Already have an account? <a href="{{path('app_login')}}">Login now</a>
+                            </div>
+                            <div class="my-5 d-flex w-100 align-items-center justify-content-between">
+                                <div class="flex-grow-1 me-3 border-top border-secondary"></div>
+                                <div class="text-uppercase text-gray-400">Or</div>
+                                <div class="flex-grow-1 ms-3 border-top border-secondary"></div>
+                            </div>
+                            <div>
+                                <!-- Bouton connexion Google -->
+                                <button type="button" class="btn btn-light d-flex align-items-center justify-content-center btn-custom mb-3 w-100">
+                                    <img width="20px" class="me-2" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" /> 
+                                    Register with Google
+                                </button>
+
+                                <!-- Bouton connexion GitHub -->
+                                <button type="button" class="btn btn-github d-flex align-items-center justify-content-center btn-custom mb-3 w-100">
+                                    <i class="bi-github me-2"></i> Register with GitHub
+                                </button>
+
+                                <!-- Bouton connexion Apple -->
+                                <button type="button" class="btn btn-apple d-flex align-items-center justify-content-center btn-custom mb-3 w-100">
+                                    <i class="bi-apple me-2"></i> Register with Apple
+                                </button>
+                                
+
+                                <!-- Bouton connexion Discord -->
+                                <button type="button" class="btn btn-discord d-flex align-items-center justify-content-center btn-custom mb-3 w-100">
+                                    <i class="bi-discord me-2"></i> Register with Discord
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
